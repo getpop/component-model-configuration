@@ -1,0 +1,54 @@
+{
+    "name": "getpop/configurationengine",
+    "type": "library",
+    "description": "Adds the configuration level to the component hierarchy, through which the data API can be extended into an application",
+    "keywords": [
+        "PoP",
+        "configurationengine"
+    ],
+    "homepage": "https://github.com/getpop/configurationengine",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Leonardo Losoviz",
+            "email": "leo@getpop.org",
+            "homepage": "https://getpop.org"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php" : "~7.1",
+        "getpop/migrate-configurationengine": "^1.0@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : ">=7.0",
+        "squizlabs/php_codesniffer": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "GetPoP\\ConfigurationEngine\\": "src"
+        },
+        "files": [
+            "initialize.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GetPoP\\ConfigurationEngine\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs src tests",
+        "fix-style": "phpcbf src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
