@@ -17,7 +17,7 @@ Adds the configuration level to the component hierarchy, through which the data 
 Via Composer
 
 ``` bash
-$ composer require getpop/configurationengine dev-master
+$ composer require getpop/component-model-configuration dev-master
 ```
 
 **Note:** Your `composer.json` file must have the configuration below to accept minimum stability `"dev"` (there are no releases for PoP yet, and the code is installed directly from the `master` branch):
@@ -542,17 +542,17 @@ If you discover any security related issues, please email leo@getpop.org instead
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/getpop/configurationengine.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/getpop/component-model-configuration.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/getpop/configurationengine/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/getpop/configurationengine.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/getpop/configurationengine.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/getpop/configurationengine.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/getpop/component-model-configuration/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/getpop/component-model-configuration.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/getpop/component-model-configuration.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/getpop/component-model-configuration.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/getpop/configurationengine
-[link-travis]: https://travis-ci.org/getpop/configurationengine
-[link-scrutinizer]: https://scrutinizer-ci.com/g/getpop/configurationengine/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/getpop/configurationengine
-[link-downloads]: https://packagist.org/packages/getpop/configurationengine
+[link-packagist]: https://packagist.org/packages/getpop/component-model-configuration
+[link-travis]: https://travis-ci.org/getpop/component-model-configuration
+[link-scrutinizer]: https://scrutinizer-ci.com/g/getpop/component-model-configuration/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/getpop/component-model-configuration
+[link-downloads]: https://packagist.org/packages/getpop/component-model-configuration
 [link-author]: https://github.com/leoloso
 [link-contributors]: ../../contributors

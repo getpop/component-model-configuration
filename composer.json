@@ -1,12 +1,12 @@
 {
-    "name": "getpop/configurationengine",
+    "name": "getpop/component-model-configuration",
     "type": "library",
-    "description": "Adds the configuration level to the component hierarchy, through which the data API can be extended into an application",
+    "description": "Adds the configuration layer to the component model",
     "keywords": [
         "PoP",
-        "configurationengine"
+        "component-model-configuration"
     ],
-    "homepage": "https://github.com/getpop/configurationengine",
+    "homepage": "https://github.com/getpop/component-model-configuration",
     "license": "MIT",
     "authors": [
         {
@@ -20,7 +20,7 @@
     "require": {
         "php" : "~7.1",
         "getpop/api": "^1.0@dev",
-        "getpop/migrate-configurationengine": "^1.0@dev"
+        "getpop/migrate-component-model-configuration": "^1.0@dev"
     },
     "require-dev": {
         "phpunit/phpunit" : ">=7.0",
