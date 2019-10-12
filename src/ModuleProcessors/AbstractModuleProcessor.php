@@ -1,7 +1,7 @@
 <?php
 namespace PoP\ConfigurationComponentModel\ModuleProcessors;
 
-abstract class AbstractModuleProcessor extends \PoP\ComponentModel\ModuleProcessors\AbstractModuleProcessor
+abstract class AbstractModuleProcessor extends \PoP\ComponentModel\ModuleProcessors\AbstractModuleProcessor implements ModuleProcessorInterface
 {
     //-------------------------------------------------
     // New PUBLIC Functions: Model Static Settings
