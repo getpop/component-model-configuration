@@ -3,5 +3,5 @@ parameters:
 
 services:
     engine:
-        class: \PoP\ComponentModelConfiguration\Engine\Engine
+        class: \PoP\ConfigurationComponentModel\Engine\Engine
         public: true
