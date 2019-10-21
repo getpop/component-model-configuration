@@ -1,0 +1,7 @@
+parameters:
+    version: '0.1.0'
+
+services:
+    engine:
+        class: \PoP\ComponentModelConfiguration\Engine\Engine
+        public: true
