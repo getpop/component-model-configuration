@@ -3,7 +3,7 @@ namespace PoP\ConfigurationComponentModel\Engine;
 use PoP\ComponentModel\Facades\Cache\PersistentCacheFacade;
 use PoP\ComponentModel\Facades\Managers\ModuleProcessorManagerFacade;
 
-class Engine extends \PoP\ComponentModel\Engine\Engine implements EngineInterface
+class Engine extends \PoP\Engine\Engine\Engine implements EngineInterface
 {
     const CACHETYPE_IMMUTABLESETTINGS = 'static-settings';
     const CACHETYPE_STATEFULSETTINGS = 'stateful-settings';
