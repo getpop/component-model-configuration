@@ -10,7 +10,7 @@ class EntryRouteModuleProcessor extends AbstractEntryRouteModuleProcessor
         $ret = array();
 
         $ret[] = [
-            'module' => [PoP_ConfigurationComponentModel_Module_Processor_Elements::class, PoP_ConfigurationComponentModel_Module_Processor_Elements::MODULE_EMPTY],
+            'module' => [\PoP_ConfigurationComponentModel_Module_Processor_Elements::class, \PoP_ConfigurationComponentModel_Module_Processor_Elements::MODULE_EMPTY],
         ];
 
         return $ret;
