@@ -5,3 +5,7 @@ services:
     engine:
         class: \PoP\ConfigurationComponentModel\Engine\Engine
         public: true
+
+    PoP\ConfigurationComponentModel\RouteModuleProcessors\:
+        resource: '../src/RouteModuleProcessors/*'
+        public: true
