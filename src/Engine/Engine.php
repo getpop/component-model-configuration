@@ -103,25 +103,4 @@ class Engine extends \PoP\Engine\Engine\Engine implements EngineInterface
 
         return $ret;
     }
-
-    // Allow PoPWebPlatform_Engine to override this function
-    protected function getEncodedDataObject($data)
-    {
-        $data = parent::getEncodedDataObject($data);
-
-        // For the API: maybe remove the entry module from the output
-        $vars = \PoP\ComponentModel\Engine_Vars::getVars();
-        if ($vars['dataoutputmode'] == GD_URLPARAM_DATAOUTPUTMODE_COMBINED) {
-            if ($data['modulesettings']) {
-                $data['modulesettings'] = $this->maybeRemoveEntryModuleFromOutput($data['modulesettings']);
-            }
-        }
-
-        // Comment Leo 14/09/2018: Re-enable here:
-        // if (true) {
-        //     unset($data['combinedstatedata']);
-        // }
-
-        return $data;
-    }
 }
