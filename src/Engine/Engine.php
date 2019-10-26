@@ -1,7 +1,7 @@
 <?php
 namespace PoP\ConfigurationComponentModel\Engine;
 use PoP\ComponentModel\Facades\Cache\PersistentCacheFacade;
-use PoP\ComponentModel\Facades\Managers\ModuleProcessorManagerFacade;
+use PoP\ComponentModel\Facades\ModuleProcessors\ModuleProcessorManagerFacade;
 
 class Engine extends \PoP\Engine\Engine\Engine implements EngineInterface
 {
