@@ -28,16 +28,7 @@ abstract class AbstractModuleProcessor extends \PoP\ComponentModel\ModuleProcess
 
     public function getImmutableConfiguration(array $module, array &$props): array
     {
-        $ret = array(
-            // GD_JS_MODULE => $module,
-            // 'fullname' => ModuleUtils::getModuleFullName($module),
-        );
-
-        // if ($this->getTypeDataResolverClass($module)) {
-        //     $ret[GD_JS_MODULEOUTPUTNAME] = ModuleUtils::getModuleOutputName($module);
-        // }
-
-        return $ret;
+        return array();
     }
 
     //-------------------------------------------------
