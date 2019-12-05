@@ -33,7 +33,7 @@ abstract class AbstractModuleProcessor extends \PoP\ComponentModel\ModuleProcess
             // 'fullname' => ModuleUtils::getModuleFullName($module),
         );
 
-        // if ($this->getDataloaderClass($module)) {
+        // if ($this->getTypeDataResolverClass($module)) {
         //     $ret[GD_JS_MODULEOUTPUTNAME] = ModuleUtils::getModuleOutputName($module);
         // }
 
