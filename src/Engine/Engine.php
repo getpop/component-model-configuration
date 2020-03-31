@@ -1,7 +1,9 @@
 <?php
 namespace PoP\ConfigurationComponentModel\Engine;
+
 use PoP\ComponentModel\Facades\Cache\PersistentCacheFacade;
 use PoP\ComponentModel\Facades\ModuleProcessors\ModuleProcessorManagerFacade;
+use PoP\ComponentModel\ComponentConfiguration as ComponentModelComponentConfiguration;
 
 class Engine extends \PoP\Engine\Engine\Engine implements EngineInterface
 {
@@ -45,7 +47,7 @@ class Engine extends \PoP\Engine\Engine\Engine implements EngineInterface
 
         $moduleprocessor_manager = ModuleProcessorManagerFacade::getInstance();
         $processor = $moduleprocessor_manager->getProcessor($module);
-        if ($useCache = \PoP\ComponentModel\Server\Utils::useCache()) {
+        if ($useCache = ComponentModelComponentConfiguration::useComponentModelCache()) {
             $cachemanager = PersistentCacheFacade::getInstance();
             $useCache = !is_null($cachemanager);
         }
