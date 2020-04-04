@@ -4,6 +4,7 @@ namespace PoP\ConfigurationComponentModel\Engine;
 use PoP\ComponentModel\Facades\Cache\PersistentCacheFacade;
 use PoP\ComponentModel\Facades\ModuleProcessors\ModuleProcessorManagerFacade;
 use PoP\ComponentModel\ComponentConfiguration as ComponentModelComponentConfiguration;
+use PoP\ComponentModel\State\ApplicationState;
 
 class Engine extends \PoP\Engine\Engine\Engine implements EngineInterface
 {
@@ -15,7 +16,7 @@ class Engine extends \PoP\Engine\Engine\Engine implements EngineInterface
         parent::processAndGenerateData();
 
         // Validate that the strata includes the required stratum
-        $vars = \PoP\ComponentModel\Engine_Vars::getVars();
+        $vars = ApplicationState::getVars();
         if (!in_array(POP_STRATUM_CONFIGURATION, $vars['strata'])) {
             return;
         }
@@ -53,7 +54,7 @@ class Engine extends \PoP\Engine\Engine\Engine implements EngineInterface
         }
 
         // From the state we know if to process static/staful content or both
-        $vars = \PoP\ComponentModel\Engine_Vars::getVars();
+        $vars = ApplicationState::getVars();
         $datasources = $vars['datasources'];
         $dataoutputmode = $vars['dataoutputmode'];
 
