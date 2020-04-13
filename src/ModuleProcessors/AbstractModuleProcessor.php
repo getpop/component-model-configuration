@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace PoP\ConfigurationComponentModel\ModuleProcessors;
 
 abstract class AbstractModuleProcessor extends \PoP\ComponentModel\ModuleProcessors\AbstractModuleProcessor implements ModuleProcessorInterface

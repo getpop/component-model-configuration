@@ -1,4 +1,7 @@
 <?php
+
+declare(strict_types=1);
+
 namespace PoP\ConfigurationComponentModel\Engine;
 
 interface EngineInterface extends \PoP\ComponentModel\Engine\EngineInterface
