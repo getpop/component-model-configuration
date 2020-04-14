@@ -514,6 +514,10 @@ Finally, given the "modelInstanceId" and URL for any request we can obtain the 3
 
 The merging can be done in the server-side too: If there is no need to cache the configuration on the client, then we can avoid the added complexity of dealing with the three subsections by adding parameter `dataoutputmode=combined` to the URL.
 
+## Standards
+
+[PSR-1](https://www.php-fig.org/psr/psr-1), [PSR-4](https://www.php-fig.org/psr/psr-4) and [PSR-12](https://www.php-fig.org/psr/psr-12).
+
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
