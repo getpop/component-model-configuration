@@ -20,6 +20,14 @@ Via Composer
 composer require getpop/component-model-configuration
 ```
 
+## Usage
+
+Initialize the component:
+
+``` php
+\PoP\ConfigurationComponentModel\Component::initialize();
+```
+
 ## Architecture Design and Implementation
 
 ### Configuration
