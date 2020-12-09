@@ -62,6 +62,7 @@ class Engine extends \PoP\Engine\Engine\Engine implements EngineInterface
         $dataoutputmode = $vars['dataoutputmode'];
 
         // First check if there's a cache stored
+        $immutable_settings = $mutableonmodel_settings = null;
         if ($useCache) {
             $immutable_settings = $cachemanager->getCacheByModelInstance(self::CACHETYPE_IMMUTABLESETTINGS);
             $mutableonmodel_settings = $cachemanager->getCacheByModelInstance(self::CACHETYPE_STATEFULSETTINGS);
