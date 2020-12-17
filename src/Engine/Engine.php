@@ -69,12 +69,15 @@ class Engine extends \PoP\Engine\Engine\Engine implements EngineInterface
         }
 
         // If there is no cached one, generate the configuration and cache it
-        if (!$immutable_settings) {
+        if ($immutable_settings === null) {
             $immutable_settings = $processor->getImmutableSettingsModuletree($module, $model_props);
-            $mutableonmodel_settings = $processor->getMutableonmodelSettingsModuletree($module, $model_props);
-
             if ($useCache) {
                 $cachemanager->storeCacheByModelInstance(self::CACHETYPE_IMMUTABLESETTINGS, $immutable_settings);
+            }
+        }
+        if ($mutableonmodel_settings === null) {
+            $mutableonmodel_settings = $processor->getMutableonmodelSettingsModuletree($module, $model_props);
+            if ($useCache) {
                 $cachemanager->storeCacheByModelInstance(self::CACHETYPE_STATEFULSETTINGS, $mutableonmodel_settings);
             }
         }
