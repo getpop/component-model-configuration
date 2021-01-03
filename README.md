@@ -1,4 +1,4 @@
-# Configuration Engine
+# Component Model Configuration
 
 [![Build Status][ico-travis]][link-travis]
 [![Quality Score][ico-code-quality]][link-code-quality]
@@ -19,6 +19,10 @@ Via Composer
 ``` bash
 composer require getpop/component-model-configuration
 ```
+
+## Development
+
+The source code is hosted on the [PoP monorepo](https://github.com/leoloso/PoP), under [`SiteBuilder/packages/component-model-configuration`](https://github.com/leoloso/PoP/tree/master/layers/SiteBuilder/packages/component-model-configuration).
 
 ## Usage
 
@@ -354,7 +358,7 @@ and
         class: "post-224"
 ```
 
-The solution I found to deep merge the configurations from different requests without overriding differing properties, either at the component hierarchy or URL levels, is to have the configuration split into 3 separate subsections: "immutable", "mutableonmodel" (where "model" is equivalent to "component hierarchy") and "mutableonrequest". Every property in the configuration must be placed under exactly 1 of the 3 sections, like this:
+The solution is to deep merge the configurations from different requests without overriding differing properties, either at the component hierarchy or URL levels, is to have the configuration split into 3 separate subsections: "immutable", "mutableonmodel" (where "model" is equivalent to "component hierarchy") and "mutableonrequest". Every property in the configuration must be placed under exactly 1 of the 3 sections, like this:
 
 - **immutable:** Contains properties which never change, such as `class: "topmodule"`
 - **mutableonmodel:** Contains properties which can change based on the component hierarchy, such as `descendants: ["module2"]`
@@ -530,7 +534,7 @@ Same as the [Supported PHP features for `getpop/root`](https://github.com/getpop
 Via [Rector](https://github.com/rectorphp/rector) (dry-run mode):
 
 ```bash
-composer downgrade-code
+composer preview-code-downgrade
 ```
 
 ## Standards
@@ -591,4 +595,4 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [link-code-quality]: https://scrutinizer-ci.com/g/getpop/component-model-configuration
 [link-downloads]: https://packagist.org/packages/getpop/component-model-configuration
 [link-author]: https://github.com/leoloso
-[link-contributors]: ../../contributors
+[link-contributors]: ../../../../../../contributors
