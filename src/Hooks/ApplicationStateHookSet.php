@@ -5,14 +5,14 @@ declare(strict_types=1);
 namespace PoP\ConfigurationComponentModel\Hooks;
 
 use PoP\Root\App;
-use PoP\BasicService\AbstractHookSet;
+use PoP\Root\Hooks\AbstractHookSet;
 use PoP\ComponentModel\ModelInstance\ModelInstance;
 
 class ApplicationStateHookSet extends AbstractHookSet
 {
     protected function init(): void
     {
-        $this->getHooksAPI()->addFilter(
+        App::addFilter(
             ModelInstance::HOOK_COMPONENTSFROMVARS_RESULT,
             [$this, 'maybeAddComponent']
         );

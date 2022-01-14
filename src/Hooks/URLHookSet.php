@@ -4,14 +4,15 @@ declare(strict_types=1);
 
 namespace PoP\ConfigurationComponentModel\Hooks;
 
+use PoP\Root\App;
 use PoP\ConfigurationComponentModel\Constants\Params;
-use PoP\BasicService\AbstractHookSet;
+use PoP\Root\Hooks\AbstractHookSet;
 
 class URLHookSet extends AbstractHookSet
 {
     protected function init(): void
     {
-        $this->getHooksAPI()->addFilter(
+        App::addFilter(
             'RequestUtils:current_url:remove_params',
             [$this, 'getParamsToRemoveFromURL']
         );
