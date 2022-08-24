@@ -21,11 +21,12 @@ class DataloadHelperService implements DataloadHelperServiceInterface
     }
     final protected function getComponentProcessorManager(): ComponentProcessorManagerInterface
     {
+        /** @var ComponentProcessorManagerInterface */
         return $this->componentProcessorManager ??= $this->instanceManager->getInstance(ComponentProcessorManagerInterface::class);
     }
 
     /**
-     * @param array<array<string, mixed>> $componentValues
+     * @param array<array<string,mixed>> $componentValues
      */
     public function addFilterParams(string $url, array $componentValues = []): string
     {
